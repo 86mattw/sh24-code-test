@@ -1,0 +1,28 @@
+{
+  "name": "sh24-code-test",
+  "version": "1.0.0",
+  "description": "Coding test for SH:24",
+  "main": "index.js",
+  "scripts": {
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "start": "gatsby develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/86mattw/sh24-code-test.git"
+  },
+  "author": "Matt Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/86mattw/sh24-code-test/issues"
+  },
+  "homepage": "https://github.com/86mattw/sh24-code-test#readme",
+  "dependencies": {
+    "gatsby": "^2.23.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
