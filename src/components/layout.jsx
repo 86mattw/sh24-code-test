@@ -2,7 +2,7 @@ import React from 'react';
 import { string, bool, node } from 'prop-types';
 import { Link } from 'gatsby';
 
-const Layout = () => ({
+const Layout = ({
   children,
   nextPage,
   prevPage,
