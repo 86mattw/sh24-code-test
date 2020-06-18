@@ -7,7 +7,7 @@
     "build": "npm run lint && gatsby build",
     "serve": "gatsby serve",
     "start": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx .",
+    "lint": "eslint --ext .js,.jsx ./src",
     "test": "jest"
   },
   "repository": {
