@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 
 import AppContext from '../context';
 import { updateEmail } from '../actions';
+import { isValidEmail } from '../utils/validation';
 import Layout from '../components/layout';
+import TextInput from '../components/text-input';
 
 export default () => {
   const { state, dispatch } = useContext(AppContext);
@@ -12,13 +14,9 @@ export default () => {
   };
 
   return (
-    <Layout nextPage="/question-3" prevPage="/question-1" nextEnabled>
+    <Layout nextPage="/question-3" prevPage="/question-1" nextEnabled={isValidEmail(state.email)}>
       <h2>What is your email address?</h2>
-      <input
-        type="text"
-        value={state.email}
-        onChange={onEmailChange}
-      />
+      <TextInput value={state.email} onChangeHandler={onEmailChange} />
     </Layout>
   );
 };

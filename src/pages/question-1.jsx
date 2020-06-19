@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 
 import AppContext from '../context';
 import { updateName } from '../actions';
+import { isValidName } from '../utils/validation';
 import Layout from '../components/layout';
+import TextInput from '../components/text-input';
 
 export default () => {
   const { state, dispatch } = useContext(AppContext);
@@ -12,13 +14,9 @@ export default () => {
   };
 
   return (
-    <Layout nextPage="/question-2" nextEnabled>
+    <Layout nextPage="/question-2" nextEnabled={isValidName(state.name)}>
       <h2>What is your name?</h2>
-      <input
-        type="text"
-        value={state.name}
-        onChange={onNameChange}
-      />
+      <TextInput value={state.name} onChangeHandler={onNameChange} />
     </Layout>
   );
 };
