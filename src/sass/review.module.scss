@@ -1,0 +1,12 @@
+@import 'settings';
+
+.label {
+  display: inline-block;
+  width: 80px;
+}
+.edit {
+  float: right;
+  margin-left: 30px;
+  color: $color-text;
+  font-size: 14px;
+}

@@ -2,20 +2,31 @@ import React from 'react';
 import { string, bool, node } from 'prop-types';
 import { Link } from 'gatsby';
 
+import '../sass/layout.scss';
+import navStyles from '../sass/navigation.module.scss';
+
 const Layout = ({
   children,
   nextPage,
   prevPage,
   nextEnabled,
 }) => (
-  <div>
-    <h1>Order</h1>
+  <div className="container">
+    <h1>Your Order</h1>
     {children}
 
-    <div>
-      {prevPage && (<Link to={prevPage}>Back</Link>)}
-      {nextEnabled && nextPage && (<Link to={nextPage}>Next</Link>)}
-    </div>
+    <nav className={navStyles.container}>
+      {prevPage && (
+        <Link className={navStyles.link} to={prevPage}>
+          &lt;&nbsp;&nbsp;Back
+        </Link>
+      )}
+      {nextEnabled && nextPage && (
+        <Link className={[navStyles.link, navStyles.next].join(' ')} to={nextPage}>
+          Next&nbsp;&nbsp;&gt;
+        </Link>
+      )}
+    </nav>
   </div>
 );
 

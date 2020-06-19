@@ -6,6 +6,8 @@ import { isValidEmail } from '../utils/validation';
 import Layout from '../components/layout';
 import TextInput from '../components/text-input';
 
+import panelStyles from '../sass/panel.module.scss';
+
 export default () => {
   const { state, dispatch } = useContext(AppContext);
 
@@ -15,8 +17,10 @@ export default () => {
 
   return (
     <Layout nextPage="/question-3" prevPage="/question-1" nextEnabled={isValidEmail(state.email)}>
-      <h2>What is your email address?</h2>
-      <TextInput value={state.email} onChangeHandler={onEmailChange} />
+      <section className={panelStyles.container}>
+        <h2 className={panelStyles.heading}>What is your email address?</h2>
+        <TextInput value={state.email} label="Email address" onChangeHandler={onEmailChange} />
+      </section>
     </Layout>
   );
 };

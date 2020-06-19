@@ -1,0 +1,13 @@
+@import 'settings';
+
+.container {
+  background-color: $color-bg;
+  color: $color-text;
+  padding: 10px 20px;
+  margin: 10px 10px 0;
+  height: 180px;
+}
+
+.heading {
+  margin-bottom: 30px;
+}

@@ -6,6 +6,8 @@ import { isValidName } from '../utils/validation';
 import Layout from '../components/layout';
 import TextInput from '../components/text-input';
 
+import panelStyles from '../sass/panel.module.scss';
+
 export default () => {
   const { state, dispatch } = useContext(AppContext);
 
@@ -15,8 +17,10 @@ export default () => {
 
   return (
     <Layout nextPage="/question-2" nextEnabled={isValidName(state.name)}>
-      <h2>What is your name?</h2>
-      <TextInput value={state.name} onChangeHandler={onNameChange} />
+      <section className={panelStyles.container}>
+        <h2 className={panelStyles.heading}>What is your name?</h2>
+        <TextInput value={state.name} label="Name" onChangeHandler={onNameChange} />
+      </section>
     </Layout>
   );
 };

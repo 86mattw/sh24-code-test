@@ -1,0 +1,19 @@
+@import 'settings';
+
+.container {
+  background-color: $color-bg;
+  color: $color-text;
+  margin: 0 10px 10px;
+  padding: 10px 20px;
+  overflow: hidden;
+  height: 38px;
+}
+
+.link {
+  color: $nav-link-color;
+  text-decoration: none;
+}
+
+.next {
+  float: right;
+}
