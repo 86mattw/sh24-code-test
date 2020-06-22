@@ -1,19 +1,17 @@
 @import 'settings';
 
-.field {
-  display: none;
-}
-
-.label {
+.option {
   display: inline-block;
   margin: 5px;
   padding: 10px 20px;
   text-align: center;
   background-color: lighten($color-bg, 10%);
+  color: $color-text;
+  border: 0 none;
   cursor: pointer;
 }
 
-.field:checked + .label {
+.selected {
   background-color: $color-bg-alt;
   color: $color-text-alt;
 }

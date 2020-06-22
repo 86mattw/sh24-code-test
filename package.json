@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/86mattw/sh24-code-test#readme",
   "dependencies": {
+    "classnames": "^2.2.6",
     "gatsby": "^2.23.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -40,6 +41,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "gatsby-plugin-sass": "^2.3.4",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "node-sass": "^4.14.1"
   }
