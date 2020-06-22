@@ -5,7 +5,11 @@
   color: $color-text;
   padding: 10px 20px;
   margin: 10px 10px 0;
-  height: 180px;
+  min-height: 200px;
+}
+
+.row {
+  margin-bottom: 10px;
 }
 
 .heading {

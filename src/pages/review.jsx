@@ -14,17 +14,17 @@ export default () => {
     <Layout prevPage="/question-3">
       <section className={panelStyles.container}>
         <h2 className={panelStyles.heading}>Review</h2>
-        <p>
+        <p className={panelStyles.row}>
           <strong className={reviewStyles.label}>Name:</strong>
           {state.name}
           <Link className={reviewStyles.edit} to="/question-1">edit</Link>
         </p>
-        <p>
+        <p className={panelStyles.row}>
           <strong className={reviewStyles.label}>Email:</strong>
           {state.email}
           <Link className={reviewStyles.edit} to="/question-2">edit</Link>
         </p>
-        <p>
+        <p className={panelStyles.row}>
           <strong className={reviewStyles.label}>Service:</strong>
           {state.service}
           <Link className={reviewStyles.edit} to="/question-3">edit</Link>
