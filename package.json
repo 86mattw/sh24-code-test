@@ -8,7 +8,11 @@
     "serve": "gatsby serve",
     "start": "gatsby develop",
     "lint": "eslint --ext .js,.jsx ./src",
-    "test": "jest"
+    "test": "jest",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test start http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test start http://localhost:8000 cy:run"
   },
   "repository": {
     "type": "git",
@@ -35,6 +39,7 @@
     "@babel/preset-env": "^7.10.2",
     "babel-jest": "^26.0.1",
     "babel-preset-gatsby": "^0.4.9",
+    "cypress": "^4.8.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
@@ -46,6 +51,7 @@
     "gatsby-plugin-sass": "^2.3.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "start-server-and-test": "^1.11.0"
   }
 }
