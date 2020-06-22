@@ -14,6 +14,7 @@ const typography = new Typography({
       name: 'IBM Plex Sans',
       styles: [
         '300',
+        '600',
       ],
     },
   ],
